@@ -1,3 +1,4 @@
+![Title bar image of thrhold widget](IMG_1199.png)
 # thrhold
 ## Throttle hold/cut indicator widget
 This Lua script widget displays the throttle cut status in one of the title bar widget areas. The code does not adjust font size and position for other larger widget areas on the main screen. 
