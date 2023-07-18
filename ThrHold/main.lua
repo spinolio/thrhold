@@ -2,6 +2,7 @@
 -- Steve Bernard
 -- Date: 2023
 -- ver: 0.1
+-- This script intended for the title bar area; font size does not change
 
 local options = {
   { "TextColor", COLOR, YELLOW },
@@ -33,12 +34,12 @@ end
 
 
 local function refresh(wgt, event, touchState)
-  if (wgt == nil)               then log("refresh(nil)")                   return end
-  if (wgt.options == nil)       then log("refresh(wgt.options=nil)")       return end
+    if (wgt == nil)               then log("refresh(nil)")                   return end
+    if (wgt.options == nil)       then log("refresh(wgt.options=nil)")       return end
 
     local font_size = MIDSIZE
     local hold_str
-    textColor = wgt.options.TextColor
+    local text_color = wgt.options.TextColor
     local val = getValue(wgt.options.Source)
     if wgt.options.Invert == 1 then
         val = val * -1
@@ -47,12 +48,12 @@ local function refresh(wgt, event, touchState)
     if val < 0 then
         hold_str = "ACTV"
     elseif val > 0 then
-        hold_str = "HOLD"
+        hold_str = "TCUT"
     else
         hold_str = "???"
     end
-  -- draw timer time
-  lcd.drawText(wgt.zone.x, wgt.zone.y, hold_str, font_size + textColor)
+    -- draw throttle hold status
+    lcd.drawText(wgt.zone.x, wgt.zone.y, hold_str, font_size + text_color)
 
 end
 
