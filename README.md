@@ -10,3 +10,8 @@ There are three options:
 - Color - Selects the foreground color of the display text
 - Source - Selects the two-value source (ideally) that controls the throttle cut
 - Invert - Use to invert the ACTV/TCUT logic in the case where TCUT is displayed when it should be ACTV
+
+## Installation
+Simply copy the ThrHold directory in this
+repo into the WIDGETS directory on your radio's SD card. You should then see a "ThrHold" entry in the
+widget selector when configuring your title bar zones.
